@@ -28,7 +28,7 @@ body {
 }
 
 .initial-banner.home {
-  background-image: url("../assets/page-1-images/unsplash_TT3GQUe6sjY@2x.png");
+  background-image: url("../assets/page-1-images/banner-inicio.png");
   position: relative;
 }
 
@@ -403,7 +403,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url("../assets/page-4-images/900w-bXELDk-GAc8.png");
+  background-image: url("../assets/page-4-images/banner-login.png");
   background-repeat: no-repeat;
   background-size: cover;
   width: 50%;
