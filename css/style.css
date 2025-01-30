@@ -385,11 +385,18 @@ body {
   color: #002b5b;
 }
 
+.footer.contact,
+.footer.login {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
 /*--ESTILOS DEL LOGIN--*/
 
 .login-container {
   display: flex;
-  height: 100vh;
+  height: 90vh;
 }
 
 .banner-login {
