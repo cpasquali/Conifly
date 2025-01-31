@@ -1,0 +1,23 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #002b5b;
+  color: white;
+  width: 120px;
+  height: 30px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  z-index: 1;
+}
+
+.btn-pay {
+  width: 100px;
+  height: 30px;
+  border: none;
+  background-color: #002b5b;
+  color: white;
+  border-radius: 10px;
+}

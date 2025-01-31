@@ -1,0 +1,52 @@
+.initial-banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 400px;
+  gap: 30px;
+}
+
+.initial-banner.home {
+  background-image: url("../assets/page-1-images/banner-inicio.png");
+  position: relative;
+}
+
+.initial-banner.home::after {
+  content: "";
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: black;
+  opacity: 0.5;
+  width: 100%;
+  position: absolute;
+}
+
+.initial-banner.trips {
+  background-image: url("../assets/page-2-images/banner-viajes.jpg");
+  position: relative;
+}
+
+.initial-banner.trips::after {
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  position: absolute;
+  background-color: black;
+  opacity: 0.5;
+}
+
+.banner-title {
+  font-size: 30px;
+  color: white;
+  font-weight: 400;
+  z-index: 1;
+}

@@ -1,0 +1,105 @@
+/*320px*/
+
+@media (min-width: 280px) and (max-width: 767px) {
+  /*--ESTILOS DEL INDEX--*/
+  .cards-container {
+    width: 200px;
+    flex-direction: column;
+  }
+
+  .testimony-card {
+    flex-direction: row;
+    gap: 40px;
+  }
+
+  .testimony-card.reverse {
+    flex-direction: row-reverse;
+  }
+
+  .testimony-profile {
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .reasons-container {
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+  }
+
+  .banner-title,
+  .testimony-title {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .reasons-container {
+    gap: 20px;
+  }
+
+  .reason {
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .reason p {
+    display: none;
+  }
+
+  .reason h3 {
+    font-size: 20px;
+  }
+
+  .reason-image {
+    height: 30px;
+  }
+
+  .reason-image.avion {
+    height: 34px;
+  }
+
+  .reason article {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+  }
+
+  .footer {
+    font-size: 12px;
+  }
+
+  .reason.margin {
+    margin-top: 20px;
+  }
+
+  /*--ESTILOS DE LOS VIAJES--*/
+
+  .trips-title {
+    text-align: center;
+  }
+
+  .card-travels-container {
+    gap: 20px;
+  }
+}
+
+/*768px*/
+
+@media (min-width: 768px) and (max-width: 102px) {
+  .reason {
+    gap: 10px;
+  }
+
+  .reason-title {
+    font-size: 20px;
+  }
+
+  .reason p {
+    font-size: 14px;
+  }
+}

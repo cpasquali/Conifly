@@ -1,0 +1,16 @@
+.testimony-container {
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.cards-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 75px;
+  margin-bottom: 20px;
+}

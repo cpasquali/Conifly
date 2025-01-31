@@ -1,19 +1,133 @@
+/*--BASE--*/
 * {
   margin: 0;
   padding: 0;
-  font-family: "Quicksand", serif;
+  box-sizing: border-box;
 }
 
+/*--LAYOUT--*/
 body {
   height: 100vh;
-  background-color: #ebebeb;
 }
 
-.navbar {
+.testimony-container {
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.cards-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 75px;
+  margin-bottom: 20px;
+}
+
+.reasons-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
   background-color: #002b5b;
 }
 
-/*--ESTILOS DEL INDEX--*/
+.reason {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 400px;
+  color: white;
+}
+.reason article {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+.reason article .reason-image {
+  height: 55px;
+}
+.reason article .reason-image.avion {
+  height: 75px;
+}
+.reason article .reason-title {
+  font-size: 24px;
+  font-weight: 400;
+  text-align: center;
+}
+.reason p {
+  text-align: center;
+}
+
+.travels-containter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.travels-containter .card-travels-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+}
+
+.testimony-container {
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.testimony-title {
+  font-size: 30px;
+  color: #002b5b;
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+
+.testimony-profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.footer {
+  background-color: #002b5b;
+  height: 60px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer.trips {
+  margin-top: 20px;
+}
+
+.footer.contact,
+.footer.login {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+/*--COMPONENTS--*/
+.navbar {
+  background-color: #002b5b;
+}
 
 .initial-banner {
   display: flex;
@@ -61,6 +175,13 @@ body {
   opacity: 0.5;
 }
 
+.banner-title {
+  font-size: 30px;
+  color: white;
+  font-weight: 400;
+  z-index: 1;
+}
+
 .button {
   display: flex;
   align-items: center;
@@ -76,42 +197,13 @@ body {
   z-index: 1;
 }
 
-.banner-title {
-  font-size: 30px;
+.btn-pay {
+  width: 100px;
+  height: 30px;
+  border: none;
+  background-color: #002b5b;
   color: white;
-  font-weight: 400;
-  z-index: 1;
-}
-
-.testimony-container {
-  display: flex;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.testimony-title {
-  font-size: 30px;
-  color: #002b5b;
-  margin-bottom: 20px;
-  font-weight: 400;
-}
-
-.testimony-profile {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-}
-
-.cards-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 75px;
-  margin-bottom: 20px;
+  border-radius: 10px;
 }
 
 .testimony-card {
@@ -122,56 +214,65 @@ body {
   align-items: center;
   justify-content: space-between;
 }
-
 .testimony-card p {
   color: #002b5b;
   text-align: center;
 }
-
-.profile-image {
+.testimony-card section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.testimony-card section img {
   width: 74px;
   height: 74px;
   border-radius: 50%;
   object-fit: cover;
 }
 
-.reasons-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 300px;
-  background-color: #002b5b;
-}
-
-.reason {
+.card-trip {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-  width: 400px;
-  color: white;
+  border: 1px solid rgb(194, 184, 194);
+  -webkit-box-shadow: 10px 10px 9px -1px rgb(194, 184, 194);
+  -moz-box-shadow: 10px 10px 9px -1px rgb(194, 184, 194);
+  box-shadow: 10px 10px 9px -1px rgb(194, 184, 194);
+  width: 300px;
+  height: 400px;
+  border-radius: 10px;
 }
-
-.reason p {
-  text-align: center;
+.card-trip .image-trip {
+  width: 100%;
+  height: 170px;
+  border-radius: 10px 10px 0 0;
 }
-
-.reason article {
+.card-trip .card-info h3,
+.card-trip .card-info p {
+  all: unset;
+}
+.card-trip .card-info h3,
+.card-trip .card-info p {
+  margin-left: 20px;
+}
+.card-trip .card-info {
+  display: flex;
+  flex-direction: column;
+}
+.card-trip .card-info h3 {
+  font-size: 22px;
+}
+.card-trip .card-info .pay-card-container {
   display: flex;
   align-items: center;
-  justify-content: center;
-  background-color: white;
-  border-radius: 50%;
-  width: 100px;
-  height: 100px;
+  gap: 40px;
 }
 
-.reason-image {
-  height: 55px;
-}
-
-.reason-image.avion {
-  height: 75px;
+.testimony-title {
+  font-size: 30px;
+  color: #002b5b;
+  margin-bottom: 20px;
+  font-weight: 400;
 }
 
 .reason-title {
@@ -179,21 +280,6 @@ body {
   font-weight: 400;
   text-align: center;
 }
-
-.footer {
-  background-color: #002b5b;
-  height: 60px;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.footer.trips {
-  margin-top: 20px;
-}
-
-/*--ESTILOS DE TRIPS--*/
 
 .trips-title {
   font-weight: 400;
@@ -203,292 +289,55 @@ body {
   color: #002b5b;
 }
 
-.travels-containter {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.card-travels-container {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 100px;
-}
-
-.card-trip {
-  display: flex;
-  flex-direction: column;
-  border: 1px solid rgba(194, 184, 194, 1);
-  -webkit-box-shadow: 10px 10px 9px -1px rgba(194, 184, 194, 1);
-  -moz-box-shadow: 10px 10px 9px -1px rgba(194, 184, 194, 1);
-  box-shadow: 10px 10px 9px -1px rgba(194, 184, 194, 1);
-  width: 300px;
-  height: 400px;
-  border-radius: 10px;
-}
-
-.card-info h3,
-.card-info p {
-  all: unset;
-}
-
-.card-info h3,
-.card-info p {
-  margin-left: 20px;
-}
-
-.card-info {
-  display: flex;
-  flex-direction: column;
-}
-
-.card-info h3 {
-  font-size: 22px;
-}
-
-.image-trip {
-  width: 100%;
-  height: 170px;
-  border-radius: 10px 10px 0 0;
-}
-
-.pay-card-container {
-  display: flex;
-  align-items: center;
-  gap: 40px;
-}
-
-.pay-card-container button {
-  width: 100px;
-  height: 30px;
-  border: none;
-  background-color: #002b5b;
-  color: white;
-  border-radius: 10px;
-}
-
-/*--ESTILOS DE LOS TIPS--*/
-
-.tips-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.title-tips {
-  font-weight: 400;
-  font-size: 24px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  color: #002b5b;
-}
-
-.tip-title {
-  font-weight: 400;
-  font-size: 21px;
-  color: #002b5b;
-}
-
-.tip-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 700px;
-  margin-bottom: 20px;
-}
-
-.tip-info {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 30px;
-}
-
-.tip-image {
-  height: 220px;
-  width: 220px;
-  object-fit: cover;
-  border-radius: 15px;
-}
-
-/*--ESTILOS DE CONTACTO--*/
-
-.contact {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.title-contact {
-  font-weight: 400;
-  font-size: 24px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  color: #002b5b;
-}
-
-.form-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: white;
-  padding: 20px 80px 20px 80px;
-  margin: 60px;
-}
-
-.form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-}
-
-.inputs-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: white;
-  width: 50%;
-}
-
-.input-form {
-  width: 200px;
-  height: 30px;
-  border-radius: 5px;
-  border: 1px solid #002b5b;
-  padding-left: 10px;
-}
-
-.input-form-email {
-  width: 97%;
-  height: 30px;
-  border-radius: 5px;
-  border: 1px solid #002b5b;
-  padding-left: 10px;
-}
-
-.input-form.textarea {
-  width: 97%;
-  height: 100px;
-}
-
-.input-form::placeholder,
-.input-form-email::placeholder {
-  color: #002b5b;
-}
-
-.footer.contact,
-.footer.login {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-}
-
-/*--ESTILOS DEL LOGIN--*/
-
-.login-container {
-  display: flex;
-  height: 90vh;
-}
-
-.banner-login {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-image: url("../assets/page-4-images/banner-login.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 50%;
-}
-
-.title-login {
-  font-weight: 400;
-  font-size: 24px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  color: #002b5b;
-}
-
-.form.login p {
-  color: #002b5b;
-}
-
-.button.login {
-  width: 210px;
-  border-radius: 5px;
-}
-
-/*--MEDIA QUERIES--*/
-
+/*--MEDIA--*/
 /*320px*/
-
 @media (min-width: 280px) and (max-width: 767px) {
   /*--ESTILOS DEL INDEX--*/
   .cards-container {
     width: 200px;
     flex-direction: column;
   }
-
   .testimony-card {
     flex-direction: row;
     gap: 40px;
   }
-
   .testimony-card.reverse {
     flex-direction: row-reverse;
   }
-
   .testimony-profile {
     align-items: center;
     justify-content: center;
     flex-direction: column;
   }
-
   .reasons-container {
     flex-direction: column;
     height: auto;
     width: 100%;
   }
-
   .banner-title,
   .testimony-title {
     font-size: 20px;
     text-align: center;
   }
-
   .reasons-container {
     gap: 20px;
   }
-
   .reason {
     flex-direction: row;
     width: 100%;
   }
-
   .reason p {
     display: none;
   }
-
   .reason h3 {
     font-size: 20px;
   }
-
   .reason-image {
     height: 30px;
   }
-
   .reason-image.avion {
     height: 34px;
   }
-
   .reason article {
     display: flex;
     align-items: center;
@@ -498,38 +347,31 @@ body {
     width: 60px;
     height: 60px;
   }
-
   .footer {
     font-size: 12px;
   }
-
   .reason.margin {
     margin-top: 20px;
   }
-
   /*--ESTILOS DE LOS VIAJES--*/
-
   .trips-title {
     text-align: center;
   }
-
   .card-travels-container {
     gap: 20px;
   }
 }
-
 /*768px*/
-
 @media (min-width: 768px) and (max-width: 102px) {
   .reason {
     gap: 10px;
   }
-
   .reason-title {
     font-size: 20px;
   }
-
   .reason p {
     font-size: 14px;
   }
 }
+
+/*# sourceMappingURL=style.css.map */
