@@ -1,0 +1,25 @@
+.input-form {
+  width: 200px;
+  height: 30px;
+  border-radius: 5px;
+  border: 1px solid #002b5b;
+  padding-left: 10px;
+}
+
+.input-form-email {
+  width: 97%;
+  height: 30px;
+  border-radius: 5px;
+  border: 1px solid #002b5b;
+  padding-left: 10px;
+}
+
+.input-form.textarea {
+  width: 97%;
+  height: 100px;
+}
+
+.input-form::placeholder,
+.input-form-email::placeholder {
+  color: #002b5b;
+}

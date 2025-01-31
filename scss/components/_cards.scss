@@ -59,3 +59,29 @@
     }
   }
 }
+
+.tip-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 700px;
+  margin-bottom: 20px;
+  .tip-title {
+    font-weight: 400;
+    font-size: 21px;
+    color: #002b5b;
+  }
+  .tip-info {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    .tip-image {
+      height: 220px;
+      width: 220px;
+      object-fit: cover;
+      border-radius: 15px;
+    }
+  }
+}

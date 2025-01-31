@@ -104,6 +104,19 @@ body {
   gap: 10px;
 }
 
+.tips-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .footer {
   background-color: #002b5b;
   height: 60px;
@@ -268,6 +281,32 @@ body {
   gap: 40px;
 }
 
+.tip-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 700px;
+  margin-bottom: 20px;
+}
+.tip-card .tip-title {
+  font-weight: 400;
+  font-size: 21px;
+  color: #002b5b;
+}
+.tip-card .tip-info {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+.tip-card .tip-info .tip-image {
+  height: 220px;
+  width: 220px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
 .testimony-title {
   font-size: 30px;
   color: #002b5b;
@@ -286,6 +325,65 @@ body {
   font-size: 24px;
   margin-top: 20px;
   margin-bottom: 20px;
+  color: #002b5b;
+}
+
+.title-tips {
+  font-weight: 400;
+  font-size: 24px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #002b5b;
+}
+
+.title-contact {
+  font-weight: 400;
+  font-size: 24px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #002b5b;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  padding: 20px 80px 20px 80px;
+  margin: 60px;
+}
+.form-container .form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.input-form {
+  width: 200px;
+  height: 30px;
+  border-radius: 5px;
+  border: 1px solid #002b5b;
+  padding-left: 10px;
+}
+
+.input-form-email {
+  width: 97%;
+  height: 30px;
+  border-radius: 5px;
+  border: 1px solid #002b5b;
+  padding-left: 10px;
+}
+
+.input-form.textarea {
+  width: 97%;
+  height: 100px;
+}
+
+.input-form::placeholder,
+.input-form-email::placeholder {
   color: #002b5b;
 }
 
