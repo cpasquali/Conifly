@@ -1,5 +1,3 @@
 .contact {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include flex(none, row, center, center, 0px);
 }

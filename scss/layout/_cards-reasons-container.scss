@@ -1,22 +1,15 @@
 .reasons-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include flex(none, row, center, center, 0px);
   height: 300px;
   background-color: #002b5b;
 }
 
 .reason {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
+  @include flex(none, column, center, space-around, 0px);
   width: 400px;
   color: white;
   article {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flex(none, column, center, space-around, 0px);
     background-color: white;
     border-radius: 50%;
     width: 100px;

@@ -2,18 +2,9 @@
   background-color: #002b5b;
   height: 60px;
   color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include flex(none, row, center, center, 0px);
 }
 
 .footer.trips {
   margin-top: 20px;
-}
-
-.footer.contact,
-.footer.login {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
 }

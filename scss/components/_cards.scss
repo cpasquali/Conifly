@@ -1,19 +1,13 @@
 .testimony-card {
-  display: flex;
   width: 200px;
   height: 180px;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
+  @include flex(none, column, center, space-between, 0px);
   p {
     color: #002b5b;
     text-align: center;
   }
   section {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
+    @include flex(none, row, center, center, 10px);
     img {
       width: 74px;
       height: 74px;
@@ -24,8 +18,7 @@
 }
 
 .card-trip {
-  display: flex;
-  flex-direction: column;
+  @include flex(none, column, none, none, 0px);
   border: 1px solid rgba(194, 184, 194, 1);
   -webkit-box-shadow: 10px 10px 9px -1px rgba(194, 184, 194, 1);
   -moz-box-shadow: 10px 10px 9px -1px rgba(194, 184, 194, 1);
@@ -47,24 +40,18 @@
     margin-left: 20px;
   }
   .card-info {
-    display: flex;
-    flex-direction: column;
+    @include flex(none, column, none, none, 0px);
     h3 {
       font-size: 22px;
     }
     .pay-card-container {
-      display: flex;
-      align-items: center;
-      gap: 40px;
+      @include flex(none, row, center, none, 40px);
     }
   }
 }
 
 .tip-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  @include flex(none, column, center, center, 0px);
   width: 700px;
   margin-bottom: 20px;
   .tip-title {
@@ -73,10 +60,7 @@
     color: #002b5b;
   }
   .tip-info {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 30px;
+    @include flex(none, row, center, center, 30px);
     .tip-image {
       height: 220px;
       width: 220px;

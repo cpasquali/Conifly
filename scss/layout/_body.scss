@@ -1,3 +1,13 @@
 body {
+  display: flex;
+  flex-direction: column;
   height: 100vh;
+}
+
+main {
+  flex: 1; //-> hace que el main ocupe todo el espacio disponible empujando el footer hacia abajo
+}
+
+footer {
+  flex-shrink: 0; //-> hace que el footer no se achique al ser empujado hacia abajo
 }
