@@ -84,6 +84,44 @@
   .card-travels-container {
     gap: 20px;
   }
+
+  .banner-login {
+    display: none;
+  }
+
+  .login-container {
+    justify-content: center;
+  }
+
+  .inputs-container {
+    flex: 0;
+    padding: 0 30px 0 30px;
+    height: 400px;
+    border-radius: 10px;
+    border: 1px solid #ffffff5d;
+  }
+
+  .form.login {
+    p {
+      width: 200px;
+      text-align: center;
+    }
+    .input-login {
+      width: 200px;
+    }
+  }
+
+  .input-login {
+    width: 300px;
+  }
+
+  .form.login {
+    justify-self: center;
+  }
+
+  .form.login {
+    width: 10%;
+  }
 }
 
 /*768px*/
@@ -107,6 +145,10 @@
 
   .reason-image.avion {
     height: 59px;
+  }
+
+  .banner-title.login {
+    font-size: 30px;
   }
 }
 

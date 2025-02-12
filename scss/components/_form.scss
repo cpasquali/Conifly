@@ -6,3 +6,14 @@
     @include flex(none, column, center, center, 20px);
   }
 }
+
+.form.login {
+  @include flex(none, column, center, center, 20px);
+  p {
+    color: white;
+    cursor: pointer;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

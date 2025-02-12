@@ -1,0 +1,6 @@
+.inputs-container {
+  @include flex(none, column, center, center, 20px);
+  flex: 1;
+  backdrop-filter: blur(56px);
+  height: 100%;
+}

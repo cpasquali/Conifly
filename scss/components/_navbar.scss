@@ -1,3 +1,16 @@
 .navbar {
   background-color: #002b5b;
 }
+
+.nav-link.text-light::after {
+  content: "";
+  display: block;
+  width: 0px;
+  height: 2px;
+  background-color: white;
+  transition: width 0.3s ease-in-out;
+}
+
+.nav-link.text-light:hover::after {
+  width: 100%;
+}

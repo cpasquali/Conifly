@@ -23,3 +23,16 @@
 .input-form-email::placeholder {
   color: #002b5b;
 }
+
+.input-login {
+  width: 300px;
+  height: 40px;
+  padding-left: 20px;
+  border-radius: 10px;
+  border: 1px solid #ffffff5d;
+  background-color: transparent;
+  color: white;
+}
+.input-login::placeholder {
+  color: white;
+}

@@ -1,0 +1,10 @@
+.banner-login {
+  @include flex(none, row, center, center, 0rem);
+  width: 50%;
+  height: 100%;
+  .banner-title {
+    font-size: 3.25rem;
+    text-align: center;
+    width: 36.25rem;
+  }
+}
