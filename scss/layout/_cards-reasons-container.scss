@@ -3,30 +3,3 @@
   height: 300px;
   background-color: #002b5b;
 }
-
-.reason {
-  @include flex(none, column, center, space-around, 0px);
-  width: 400px;
-  color: white;
-  article {
-    @include flex(none, column, center, space-around, 0px);
-    background-color: white;
-    border-radius: 50%;
-    width: 100px;
-    height: 100px;
-    .reason-image {
-      height: 55px;
-    }
-    .reason-image.avion {
-      height: 75px;
-    }
-    .reason-title {
-      font-size: 24px;
-      font-weight: 400;
-      text-align: center;
-    }
-  }
-  p {
-    text-align: center;
-  }
-}

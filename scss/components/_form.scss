@@ -1,6 +1,5 @@
 .form-container {
   @include flex(none, column, center, center, 0px);
-  background-color: white;
   padding: 20px 80px 20px 80px;
   margin: 60px;
   .form {

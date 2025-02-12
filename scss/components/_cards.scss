@@ -9,8 +9,8 @@
   section {
     @include flex(none, row, center, center, 10px);
     img {
-      width: 74px;
-      height: 74px;
+      width: 70px;
+      height: 70px;
       border-radius: 50%;
       object-fit: cover;
     }
@@ -67,5 +67,26 @@
       object-fit: cover;
       border-radius: 15px;
     }
+  }
+}
+
+.reason {
+  @include flex(none, column, center, space-around, 0px);
+  width: 400px;
+  color: white;
+  article {
+    @include flex(none, column, center, space-around, 0px);
+    background-color: white;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    .reason-title {
+      font-size: 24px;
+      font-weight: 400;
+      text-align: center;
+    }
+  }
+  p {
+    text-align: center;
   }
 }

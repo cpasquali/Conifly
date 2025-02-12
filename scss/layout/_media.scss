@@ -51,14 +51,6 @@
     font-size: 20px;
   }
 
-  .reason-image {
-    height: 30px;
-  }
-
-  .reason-image.avion {
-    height: 34px;
-  }
-
   .reason article {
     display: flex;
     align-items: center;
@@ -67,6 +59,14 @@
     border-radius: 50%;
     width: 60px;
     height: 60px;
+  }
+
+  .reason-image {
+    height: 36px;
+  }
+
+  .reason-image.avion {
+    height: 39px;
   }
 
   .footer {
@@ -90,7 +90,7 @@
 
 /*768px*/
 
-@media (min-width: 768px) and (max-width: 102px) {
+@media (min-width: 768px) and (max-width: 1024px) {
   .reason {
     gap: 10px;
   }
@@ -101,5 +101,23 @@
 
   .reason p {
     font-size: 14px;
+  }
+
+  .reason-image {
+    height: 56px;
+  }
+
+  .reason-image.avion {
+    height: 59px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .reason-image {
+    height: 62px;
+  }
+
+  .reason-image.avion {
+    height: 69px;
   }
 }

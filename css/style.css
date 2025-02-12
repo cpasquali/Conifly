@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*--UTILITIES--*/
 /*--BASE--*/
 * {
@@ -53,43 +54,6 @@ footer {
   background-color: #002b5b;
 }
 
-.reason {
-  display: flex;
-  flex-wrap: none;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-  gap: 0px;
-  width: 400px;
-  color: white;
-}
-.reason article {
-  display: flex;
-  flex-wrap: none;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-  gap: 0px;
-  background-color: white;
-  border-radius: 50%;
-  width: 100px;
-  height: 100px;
-}
-.reason article .reason-image {
-  height: 55px;
-}
-.reason article .reason-image.avion {
-  height: 75px;
-}
-.reason article .reason-title {
-  font-size: 24px;
-  font-weight: 400;
-  text-align: center;
-}
-.reason p {
-  text-align: center;
-}
-
 .travels-containter {
   display: flex;
   flex-wrap: none;
@@ -111,15 +75,6 @@ footer {
   display: flex;
   flex-wrap: none;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 0px;
-}
-
-.contact {
-  display: flex;
-  flex-wrap: none;
-  flex-direction: row;
   align-items: center;
   justify-content: center;
   gap: 0px;
@@ -250,8 +205,8 @@ footer {
   gap: 10px;
 }
 .testimony-card section img {
-  width: 74px;
-  height: 74px;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
   object-fit: cover;
 }
@@ -334,6 +289,37 @@ footer {
   border-radius: 15px;
 }
 
+.reason {
+  display: flex;
+  flex-wrap: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  gap: 0px;
+  width: 400px;
+  color: white;
+}
+.reason article {
+  display: flex;
+  flex-wrap: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  gap: 0px;
+  background-color: white;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+.reason article .reason-title {
+  font-size: 24px;
+  font-weight: 400;
+  text-align: center;
+}
+.reason p {
+  text-align: center;
+}
+
 .testimony-title {
   font-size: 30px;
   color: #002b5b;
@@ -371,6 +357,26 @@ footer {
   color: #002b5b;
 }
 
+.banner-title.home::after {
+  content: "El mundo te espera, ¡comienza tu próxima aventura hoy!";
+  opacity: 1;
+  animation: text-change 4s infinite;
+}
+
+@keyframes text-change {
+  0% {
+    content: "El mundo te espera, ¡comienza tu próxima aventura hoy!";
+  }
+  33% {
+    content: "Tu próxima gran historia comienza con un boleto de avión";
+  }
+  66% {
+    content: "Vuela alto, explora lejos, vive sin límites";
+  }
+  100% {
+    content: "Las mejores vistas vienen después del despegue";
+  }
+}
 .form-container {
   display: flex;
   flex-wrap: none;
@@ -378,7 +384,6 @@ footer {
   align-items: center;
   justify-content: center;
   gap: 0px;
-  background-color: white;
   padding: 20px 80px 20px 80px;
   margin: 60px;
 }
@@ -460,12 +465,6 @@ footer {
   .reason h3 {
     font-size: 20px;
   }
-  .reason-image {
-    height: 30px;
-  }
-  .reason-image.avion {
-    height: 34px;
-  }
   .reason article {
     display: flex;
     align-items: center;
@@ -474,6 +473,12 @@ footer {
     border-radius: 50%;
     width: 60px;
     height: 60px;
+  }
+  .reason-image {
+    height: 36px;
+  }
+  .reason-image.avion {
+    height: 39px;
   }
   .footer {
     font-size: 12px;
@@ -490,7 +495,7 @@ footer {
   }
 }
 /*768px*/
-@media (min-width: 768px) and (max-width: 102px) {
+@media (min-width: 768px) and (max-width: 1024px) {
   .reason {
     gap: 10px;
   }
@@ -499,6 +504,20 @@ footer {
   }
   .reason p {
     font-size: 14px;
+  }
+  .reason-image {
+    height: 56px;
+  }
+  .reason-image.avion {
+    height: 59px;
+  }
+}
+@media (min-width: 1025px) {
+  .reason-image {
+    height: 62px;
+  }
+  .reason-image.avion {
+    height: 69px;
   }
 }
 

@@ -3,14 +3,15 @@
 
 /*--BASE--*/
 @import "./base/reset";
+
 /*--LAYOUT--*/
 @import "./layout/body";
 @import "./layout/cards-testimony-container";
 @import "./layout/cards-reasons-container";
 @import "./layout/cards-travels-container";
 @import "./layout/tips-container";
-@import "./layout/contact";
 @import "./layout/footers";
+
 /*--COMPONENTS--*/
 @import "./components/navbar";
 @import "./components/banners";

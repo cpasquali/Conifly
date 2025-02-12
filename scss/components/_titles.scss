@@ -34,3 +34,24 @@
   margin-bottom: 20px;
   color: #002b5b;
 }
+
+.banner-title.home::after {
+  content: map-get($titles, title1);
+  opacity: 1;
+  animation: text-change 4s infinite;
+}
+
+@keyframes text-change {
+  0% {
+    content: map-get($titles, title1);
+  }
+  33% {
+    content: map-get($titles, title2);
+  }
+  66% {
+    content: map-get($titles, title3);
+  }
+  100% {
+    content: map-get($titles, title4);
+  }
+}
