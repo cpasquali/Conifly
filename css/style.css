@@ -196,14 +196,6 @@ footer {
   color: #002b5b;
   text-align: center;
 }
-.testimony-card section {
-  display: flex;
-  flex-wrap: none;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-}
 .testimony-card section img {
   width: 70px;
   height: 70px;
@@ -510,6 +502,9 @@ footer {
   }
   .reason-image.avion {
     height: 59px;
+  }
+  .testimony-profile {
+    flex-direction: row;
   }
 }
 @media (min-width: 1025px) {

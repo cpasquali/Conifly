@@ -7,7 +7,6 @@
     text-align: center;
   }
   section {
-    @include flex(none, row, center, center, 10px);
     img {
       width: 70px;
       height: 70px;
