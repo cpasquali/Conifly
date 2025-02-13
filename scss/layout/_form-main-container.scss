@@ -1,0 +1,7 @@
+.form-main-container {
+  display: flex;
+  align-items: center;
+  background-image: map-get($background, bgimage3);
+  background-repeat: no-repeat;
+  background-size: cover;
+}

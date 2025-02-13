@@ -81,11 +81,11 @@
     text-align: center;
   }
 
-  .banner-login {
+  .aside-message {
     display: none;
   }
 
-  .login-container {
+  .form-main-container {
     justify-content: center;
   }
 
@@ -97,26 +97,46 @@
     border: 1px solid #ffffff5d;
   }
 
-  .form.login {
+  .inputs-container.contact {
+    padding-top: 300px;
+    padding-bottom: 300px;
+  }
+
+  .input-field.text-area {
+    height: 200px;
+  }
+
+  .input-field.name {
+    margin-bottom: 20px;
+  }
+
+  .form {
     p {
       width: 200px;
       text-align: center;
     }
-    .input-login {
-      width: 200px;
+    .input-field {
+      width: 240px;
     }
   }
 
-  .input-login {
-    width: 300px;
-  }
-
-  .form.login {
+  .form {
     justify-self: center;
   }
 
-  .form.login {
-    width: 10%;
+  .button.login {
+    width: 240px;
+  }
+
+  .button.register {
+    width: 240px;
+  }
+
+  .tip-card {
+    width: 200px;
+    .tip-info {
+      flex-direction: column;
+    }
   }
 }
 
@@ -146,14 +166,37 @@
   .banner-title.login {
     font-size: 30px;
   }
+
+  .input-field.email {
+    width: 300px;
+  }
+
+  .input-field.text-area {
+    width: 300px;
+  }
+
+  .form {
+    section {
+      text-align: center;
+      .input-field.name {
+        margin-bottom: 20px;
+      }
+    }
+  }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1024px) and (max-width: 1208px) {
   .reason-image {
     height: 62px;
   }
 
   .reason-image.avion {
     height: 69px;
+  }
+
+  .form {
+    section {
+      display: flex;
+    }
   }
 }

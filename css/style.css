@@ -98,7 +98,7 @@ footer {
   margin-top: 20px;
 }
 
-.login-container {
+.form-main-container {
   display: flex;
   align-items: center;
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1000%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='%230e2a47'%3e%3c/rect%3e%3cpath d='M 0%2c232 C 57.6%2c213.4 172.8%2c155.8 288%2c139 C 403.2%2c122.2 460.8%2c149.6 576%2c148 C 691.2%2c146.4 748.8%2c110.2 864%2c131 C 979.2%2c151.8 1036.8%2c252.8 1152%2c252 C 1267.2%2c251.2 1382.4%2c152 1440%2c127L1440 560L0 560z' fill='%23184a7e'%3e%3c/path%3e%3cpath d='M 0%2c485 C 96%2c455.8 288%2c334.6 480%2c339 C 672%2c343.4 768%2c516 960%2c507 C 1152%2c498 1344%2c336.6 1440%2c294L1440 560L0 560z' fill='%232264ab'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1000'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
@@ -318,7 +318,7 @@ footer {
 .tip-card .tip-info {
   display: flex;
   flex-wrap: none;
-  flex-direction: row;
+  flex-direction: none;
   align-items: center;
   justify-content: center;
   gap: 30px;
@@ -418,21 +418,11 @@ footer {
     content: "Las mejores vistas vienen después del despegue";
   }
 }
-.title-login {
+.title-form {
   color: white;
 }
 
-.form-container {
-  display: flex;
-  flex-wrap: none;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 0px;
-  padding: 20px 80px 20px 80px;
-  margin: 60px;
-}
-.form-container .form {
+.form {
   display: flex;
   flex-wrap: none;
   flex-direction: column;
@@ -441,42 +431,7 @@ footer {
   gap: 20px;
 }
 
-.form.login {
-  display: flex;
-  flex-wrap: none;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-}
-
-.input-form {
-  width: 200px;
-  height: 30px;
-  border-radius: 5px;
-  border: 1px solid #002b5b;
-  padding-left: 10px;
-}
-
-.input-form-email {
-  width: 97%;
-  height: 30px;
-  border-radius: 5px;
-  border: 1px solid #002b5b;
-  padding-left: 10px;
-}
-
-.input-form.textarea {
-  width: 97%;
-  height: 100px;
-}
-
-.input-form::placeholder,
-.input-form-email::placeholder {
-  color: #002b5b;
-}
-
-.input-login {
+.input-field {
   width: 300px;
   height: 40px;
   padding-left: 20px;
@@ -486,11 +441,21 @@ footer {
   color: white;
 }
 
-.input-login::placeholder {
+.input-field::placeholder {
   color: white;
 }
 
-.banner-login {
+.input-field.email {
+  width: 600px;
+}
+
+.input-field.text-area {
+  width: 600px;
+  height: 300px;
+  padding-top: 20px;
+}
+
+.aside-message {
   display: flex;
   flex-wrap: none;
   flex-direction: row;
@@ -500,7 +465,7 @@ footer {
   width: 50%;
   height: 100%;
 }
-.banner-login .banner-title {
+.aside-message .banner-title {
   font-size: 3.25rem;
   text-align: center;
   width: 36.25rem;
@@ -584,10 +549,10 @@ footer {
   .trips-title {
     text-align: center;
   }
-  .banner-login {
+  .aside-message {
     display: none;
   }
-  .login-container {
+  .form-main-container {
     justify-content: center;
   }
   .inputs-container {
@@ -597,21 +562,37 @@ footer {
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.3647058824);
   }
-  .form.login p {
+  .inputs-container.contact {
+    padding-top: 300px;
+    padding-bottom: 300px;
+  }
+  .input-field.text-area {
+    height: 200px;
+  }
+  .input-field.name {
+    margin-bottom: 20px;
+  }
+  .form p {
     width: 200px;
     text-align: center;
   }
-  .form.login .input-login {
-    width: 200px;
+  .form .input-field {
+    width: 240px;
   }
-  .input-login {
-    width: 300px;
-  }
-  .form.login {
+  .form {
     justify-self: center;
   }
-  .form.login {
-    width: 10%;
+  .button.login {
+    width: 240px;
+  }
+  .button.register {
+    width: 240px;
+  }
+  .tip-card {
+    width: 200px;
+  }
+  .tip-card .tip-info {
+    flex-direction: column;
   }
 }
 /*768px*/
@@ -634,13 +615,28 @@ footer {
   .banner-title.login {
     font-size: 30px;
   }
+  .input-field.email {
+    width: 300px;
+  }
+  .input-field.text-area {
+    width: 300px;
+  }
+  .form section {
+    text-align: center;
+  }
+  .form section .input-field.name {
+    margin-bottom: 20px;
+  }
 }
-@media (min-width: 1024px) {
+@media (min-width: 1024px) and (max-width: 1208px) {
   .reason-image {
     height: 62px;
   }
   .reason-image.avion {
     height: 69px;
+  }
+  .form section {
+    display: flex;
   }
 }
 
