@@ -1,6 +1,6 @@
 .travels-containter {
   @include flex(none, column, center, center, 0px);
   .card-travels-container {
-    @include flex(wrap, row, center, center, 100px);
+    @include flex(wrap, row, center, center, 20px);
   }
 }

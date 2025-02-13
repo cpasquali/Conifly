@@ -20,9 +20,6 @@
 .card-trip {
   @include flex(none, column, none, none, 0px);
   border: 1px solid rgba(194, 184, 194, 1);
-  -webkit-box-shadow: 10px 10px 9px -1px rgba(194, 184, 194, 1);
-  -moz-box-shadow: 10px 10px 9px -1px rgba(194, 184, 194, 1);
-  box-shadow: 10px 10px 9px -1px rgba(194, 184, 194, 1);
   width: 300px;
   height: 400px;
   border-radius: 10px;
