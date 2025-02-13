@@ -602,7 +602,13 @@ footer {
     text-align: center;
   }
   .form.login .input-login {
-    width: 200px;
+    width: 250px;
+  }
+  .form.login .button.login {
+    width: 250px;
+  }
+  .form.login .button.register {
+    width: 250px;
   }
   .input-login {
     width: 300px;
