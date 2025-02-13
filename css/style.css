@@ -185,7 +185,7 @@ footer {
   align-items: center;
   justify-content: center;
   gap: 0px;
-  background-color: #002b5b;
+  background-color: #17406e;
   color: white;
   width: 120px;
   height: 30px;
@@ -194,6 +194,15 @@ footer {
   cursor: pointer;
   text-decoration: none;
   z-index: 1;
+  transition: all 0.3s;
+}
+.button:hover {
+  background-color: #002b5b;
+}
+
+.button.login {
+  width: 300px;
+  height: 40px;
 }
 
 .btn-pay {
@@ -203,6 +212,18 @@ footer {
   background-color: #002b5b;
   color: white;
   border-radius: 10px;
+}
+.btn-pay:hover {
+  background-color: #002b5b;
+}
+
+.button.register {
+  background-color: transparent;
+  width: 300px;
+  height: 40px;
+}
+.button.register:hover {
+  background-color: rgba(255, 255, 255, 0.349);
 }
 
 .testimony-card {
@@ -427,13 +448,6 @@ footer {
   align-items: center;
   justify-content: center;
   gap: 20px;
-}
-.form.login p {
-  color: white;
-  cursor: pointer;
-}
-.form.login p:hover {
-  text-decoration: underline;
 }
 
 .input-form {
