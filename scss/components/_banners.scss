@@ -7,7 +7,7 @@
 }
 
 .initial-banner.home {
-  background-image: url("../assets/page-1-images/banner-inicio.png");
+  background-image: map-get($background, bgimage1);
   position: relative;
 }
 
@@ -24,7 +24,7 @@
 }
 
 .initial-banner.trips {
-  background-image: url("../assets/page-2-images/banner-viajes.jpg");
+  background-image: map-get($background, bgimage2);
   position: relative;
 }
 

@@ -1,17 +1,642 @@
-/* Error: Can't find stylesheet to import.
- *    ,
- * 16 | @import "./layout/login";
- *    |         ^^^^^^^^^^^^^^^^
- *    '
- *   scss\style.scss 16:9  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Can't find stylesheet to import.\a    \2577 \a 16 \2502  @import \"./layout/login\";\d\a    \2502          ^^^^^^^^^^^^^^^^\a    \2575 \a   scss\\style.scss 16:9  root stylesheet";
+@charset "UTF-8";
+/*--UTILITIES--*/
+/*--BASE--*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Quicksand", serif;
 }
+
+/*--LAYOUT--*/
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+footer {
+  flex-shrink: 0;
+}
+
+.testimony-container {
+  display: flex;
+  flex-wrap: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: none;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 75px;
+  margin-bottom: 20px;
+}
+
+.reasons-container {
+  display: flex;
+  flex-wrap: none;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0px;
+  height: 300px;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1000%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='%230e2a47'%3e%3c/rect%3e%3cpath d='M 0%2c232 C 57.6%2c213.4 172.8%2c155.8 288%2c139 C 403.2%2c122.2 460.8%2c149.6 576%2c148 C 691.2%2c146.4 748.8%2c110.2 864%2c131 C 979.2%2c151.8 1036.8%2c252.8 1152%2c252 C 1267.2%2c251.2 1382.4%2c152 1440%2c127L1440 560L0 560z' fill='%23184a7e'%3e%3c/path%3e%3cpath d='M 0%2c485 C 96%2c455.8 288%2c334.6 480%2c339 C 672%2c343.4 768%2c516 960%2c507 C 1152%2c498 1344%2c336.6 1440%2c294L1440 560L0 560z' fill='%232264ab'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1000'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.travels-containter {
+  display: flex;
+  flex-wrap: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0px;
+}
+.travels-containter .card-travels-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.tips-container {
+  display: flex;
+  flex-wrap: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0px;
+}
+
+.footer {
+  background-color: #002b5b;
+  height: 60px;
+  color: white;
+  display: flex;
+  flex-wrap: none;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0px;
+}
+
+.footer.trips {
+  margin-top: 20px;
+}
+
+.form-main-container {
+  display: flex;
+  align-items: center;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1000%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='%230e2a47'%3e%3c/rect%3e%3cpath d='M 0%2c232 C 57.6%2c213.4 172.8%2c155.8 288%2c139 C 403.2%2c122.2 460.8%2c149.6 576%2c148 C 691.2%2c146.4 748.8%2c110.2 864%2c131 C 979.2%2c151.8 1036.8%2c252.8 1152%2c252 C 1267.2%2c251.2 1382.4%2c152 1440%2c127L1440 560L0 560z' fill='%23184a7e'%3e%3c/path%3e%3cpath d='M 0%2c485 C 96%2c455.8 288%2c334.6 480%2c339 C 672%2c343.4 768%2c516 960%2c507 C 1152%2c498 1344%2c336.6 1440%2c294L1440 560L0 560z' fill='%232264ab'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1000'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/*--COMPONENTS--*/
+.navbar {
+  background-color: #002b5b;
+}
+
+.nav-link.text-light::after {
+  content: "";
+  display: block;
+  width: 0px;
+  height: 2px;
+  background-color: white;
+  transition: width 0.3s ease-in-out;
+}
+
+.nav-link.text-light:hover::after {
+  width: 100%;
+}
+
+.initial-banner {
+  display: flex;
+  flex-wrap: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 400px;
+}
+
+.initial-banner.home {
+  background-image: url("../assets/page-1-images/banner-inicio.png");
+  position: relative;
+}
+
+.initial-banner.home::after {
+  content: "";
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: black;
+  opacity: 0.5;
+  width: 100%;
+  position: absolute;
+}
+
+.initial-banner.trips {
+  background-image: url("../assets/page-2-images/banner-viajes.jpg");
+  position: relative;
+}
+
+.initial-banner.trips::after {
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  position: absolute;
+  background-color: black;
+  opacity: 0.5;
+}
+
+.banner-title {
+  font-size: 30px;
+  color: white;
+  font-weight: 400;
+  z-index: 1;
+}
+
+.button {
+  display: flex;
+  flex-wrap: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0px;
+  background-color: #17406e;
+  color: white;
+  width: 120px;
+  height: 30px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  z-index: 1;
+  transition: all 0.3s;
+}
+.button:hover {
+  background-color: #002b5b;
+}
+
+.button.login {
+  width: 300px;
+  height: 40px;
+}
+
+.btn-pay {
+  width: 100px;
+  height: 30px;
+  border: none;
+  background-color: #002b5b;
+  color: white;
+  border-radius: 10px;
+}
+.btn-pay:hover {
+  background-color: #002b5b;
+}
+
+.button.register {
+  background-color: transparent;
+  width: 300px;
+  height: 40px;
+}
+.button.register:hover {
+  background-color: rgba(255, 255, 255, 0.349);
+}
+
+.testimony-card {
+  width: 200px;
+  height: 180px;
+  display: flex;
+  flex-wrap: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0px;
+}
+.testimony-card p {
+  color: #002b5b;
+  text-align: center;
+}
+.testimony-card section {
+  display: flex;
+  flex-wrap: none;
+  flex-direction: none;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.testimony-card section img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.card-trip {
+  display: flex;
+  flex-wrap: none;
+  flex-direction: column;
+  align-items: none;
+  justify-content: none;
+  gap: 0px;
+  border: 1px solid rgb(194, 184, 194);
+  width: 300px;
+  height: 400px;
+  border-radius: 10px;
+}
+.card-trip .image-trip {
+  width: 100%;
+  height: 170px;
+  border-radius: 10px 10px 0 0;
+}
+.card-trip .card-info h3,
+.card-trip .card-info p {
+  all: unset;
+}
+.card-trip .card-info h3,
+.card-trip .card-info p {
+  margin-left: 20px;
+}
+.card-trip .card-info {
+  display: flex;
+  flex-wrap: none;
+  flex-direction: column;
+  align-items: none;
+  justify-content: none;
+  gap: 0px;
+}
+.card-trip .card-info h3 {
+  font-size: 22px;
+}
+.card-trip .card-info .pay-card-container {
+  display: flex;
+  flex-wrap: none;
+  flex-direction: row;
+  align-items: center;
+  justify-content: none;
+  gap: 40px;
+}
+
+.tip-card {
+  display: flex;
+  flex-wrap: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0px;
+  width: 700px;
+  margin-bottom: 20px;
+}
+.tip-card .tip-title {
+  font-weight: 400;
+  font-size: 21px;
+  color: #002b5b;
+}
+.tip-card .tip-info {
+  display: flex;
+  flex-wrap: none;
+  flex-direction: none;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+.tip-card .tip-info .tip-image {
+  height: 220px;
+  width: 220px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.reason {
+  display: flex;
+  flex-wrap: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  gap: 0px;
+  width: 400px;
+  color: white;
+}
+.reason article {
+  display: flex;
+  flex-wrap: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  gap: 0px;
+  background-color: white;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+.reason article .reason-title {
+  font-size: 24px;
+  font-weight: 400;
+  text-align: center;
+}
+.reason p {
+  text-align: center;
+}
+
+.testimony-title {
+  font-size: 30px;
+  color: #002b5b;
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+
+.reason-title {
+  font-size: 24px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.trips-title {
+  font-weight: 400;
+  font-size: 24px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #002b5b;
+}
+
+.title-tips {
+  font-weight: 400;
+  font-size: 24px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #002b5b;
+}
+
+.title-contact {
+  font-weight: 400;
+  font-size: 24px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #002b5b;
+}
+
+.banner-title.home::after {
+  content: "El mundo te espera, ¡comienza tu próxima aventura hoy!";
+  opacity: 1;
+  animation: text-change 4s infinite;
+}
+
+@keyframes text-change {
+  0% {
+    content: "El mundo te espera, ¡comienza tu próxima aventura hoy!";
+  }
+  33% {
+    content: "Tu próxima gran historia comienza con un boleto de avión";
+  }
+  66% {
+    content: "Vuela alto, explora lejos, vive sin límites";
+  }
+  100% {
+    content: "Las mejores vistas vienen después del despegue";
+  }
+}
+.title-form {
+  color: white;
+}
+
+.form {
+  display: flex;
+  flex-wrap: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.input-field {
+  width: 300px;
+  height: 40px;
+  padding-left: 20px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.3647058824);
+  background-color: transparent;
+  color: white;
+}
+
+.input-field::placeholder {
+  color: white;
+}
+
+.input-field.email {
+  width: 600px;
+}
+
+.input-field.text-area {
+  width: 600px;
+  height: 300px;
+  padding-top: 20px;
+}
+
+.aside-message {
+  display: flex;
+  flex-wrap: none;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0rem;
+  width: 50%;
+  height: 100%;
+}
+.aside-message .banner-title {
+  font-size: 3.25rem;
+  text-align: center;
+  width: 36.25rem;
+}
+
+.inputs-container {
+  display: flex;
+  flex-wrap: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex: 1;
+  backdrop-filter: blur(56px);
+  height: 100%;
+}
+
+/*--MEDIA--*/
+/*320px*/
+@media (min-width: 280px) and (max-width: 767px) {
+  /*--ESTILOS DEL INDEX--*/
+  .cards-container {
+    width: 200px;
+    flex-direction: column;
+  }
+  .testimony-card {
+    flex-direction: row;
+    gap: 40px;
+  }
+  .testimony-card.reverse {
+    flex-direction: row-reverse;
+  }
+  .reasons-container {
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+  }
+  .banner-title,
+  .testimony-title {
+    font-size: 20px;
+    text-align: center;
+  }
+  .testimony-profile {
+    flex-direction: column;
+  }
+  .reasons-container {
+    gap: 20px;
+  }
+  .reason {
+    flex-direction: row;
+    width: 100%;
+  }
+  .reason p {
+    display: none;
+  }
+  .reason h3 {
+    font-size: 20px;
+  }
+  .reason article {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+  }
+  .reason-image {
+    height: 36px;
+  }
+  .reason-image.avion {
+    height: 39px;
+  }
+  .footer {
+    font-size: 12px;
+  }
+  .reason.margin {
+    margin-top: 20px;
+  }
+  /*--ESTILOS DE LOS VIAJES--*/
+  .trips-title {
+    text-align: center;
+  }
+  .aside-message {
+    display: none;
+  }
+  .form-main-container {
+    justify-content: center;
+  }
+  .inputs-container {
+    flex: 0;
+    padding: 0 30px 0 30px;
+    height: 400px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.3647058824);
+  }
+  .inputs-container.contact {
+    padding-top: 300px;
+    padding-bottom: 300px;
+  }
+  .input-field.text-area {
+    height: 200px;
+  }
+  .input-field.name {
+    margin-bottom: 20px;
+  }
+  .form p {
+    width: 200px;
+    text-align: center;
+  }
+  .form .input-field {
+    width: 240px;
+  }
+  .form {
+    justify-self: center;
+  }
+  .button.login {
+    width: 240px;
+  }
+  .button.register {
+    width: 240px;
+  }
+  .tip-info {
+    flex-direction: column;
+    width: 200px;
+  }
+}
+/*768px*/
+@media (min-width: 768px) and (max-width: 1023px) {
+  .reason {
+    gap: 10px;
+  }
+  .reason-title {
+    font-size: 20px;
+  }
+  .reason p {
+    font-size: 14px;
+  }
+  .reason-image {
+    height: 56px;
+  }
+  .reason-image.avion {
+    height: 59px;
+  }
+  .banner-title.login {
+    font-size: 30px;
+  }
+  .input-field.email {
+    width: 300px;
+  }
+  .input-field.text-area {
+    width: 300px;
+  }
+  .form section {
+    text-align: center;
+  }
+  .form section .input-field.name {
+    margin-bottom: 20px;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1208px) {
+  .reason-image {
+    height: 62px;
+  }
+  .reason-image.avion {
+    height: 69px;
+  }
+  .form section {
+    display: flex;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
