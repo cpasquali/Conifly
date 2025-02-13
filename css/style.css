@@ -318,7 +318,7 @@ footer {
 .tip-card .tip-info {
   display: flex;
   flex-wrap: none;
-  flex-direction: row;
+  flex-direction: none;
   align-items: center;
   justify-content: center;
   gap: 30px;
@@ -618,6 +618,20 @@ footer {
   }
   .form.login {
     width: 10%;
+  }
+  .tip-title {
+    width: 250px;
+    text-align: center;
+  }
+  .tip-info {
+    flex-direction: column;
+  }
+  .tip-info p {
+    width: 250px;
+    text-align: center;
+  }
+  .tip-card {
+    width: 200px;
   }
 }
 /*768px*/

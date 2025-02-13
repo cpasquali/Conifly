@@ -126,6 +126,23 @@
   .form.login {
     width: 10%;
   }
+
+  .tip-title {
+    width: 250px;
+    text-align: center;
+  }
+
+  .tip-info {
+    flex-direction: column;
+    p {
+      width: 250px;
+      text-align: center;
+    }
+  }
+
+  .tip-card {
+    width: 200px;
+  }
 }
 
 /*768px*/

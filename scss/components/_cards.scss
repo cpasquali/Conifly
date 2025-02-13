@@ -57,7 +57,7 @@
     color: #002b5b;
   }
   .tip-info {
-    @include flex(none, row, center, center, 30px);
+    @include flex(none, none, center, center, 30px);
     .tip-image {
       height: 220px;
       width: 220px;
