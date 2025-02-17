@@ -196,7 +196,7 @@
   }
 }
 
-@media (min-width: 1024px) and (max-width: 1208px) {
+@media (min-width: 1024px) {
   .reason-image {
     height: 62px;
   }
@@ -208,6 +208,11 @@
   .form {
     section {
       display: flex;
+      gap: 5px;
     }
+  }
+
+  .inputs-container {
+    padding: 20px;
   }
 }
