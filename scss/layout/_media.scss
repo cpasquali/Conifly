@@ -149,7 +149,10 @@
 
   .tip-info {
     flex-direction: column;
-    width: 200px;
+    width: 300px;
+    p {
+      text-align: center;
+    }
   }
 }
 

@@ -604,7 +604,10 @@ footer {
   }
   .tip-info {
     flex-direction: column;
-    width: 200px;
+    width: 300px;
+  }
+  .tip-info p {
+    text-align: center;
   }
 }
 /*768px*/
