@@ -547,8 +547,18 @@ footer {
     margin-top: 20px;
   }
   /*--ESTILOS DE LOS VIAJES--*/
+  .title-tips {
+    text-align: center;
+  }
   .trips-title {
     text-align: center;
+  }
+  .tip-title {
+    text-align: center;
+    width: 200px;
+  }
+  .tip-card {
+    width: 250px;
   }
   .aside-message {
     display: none;
