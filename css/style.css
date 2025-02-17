@@ -490,12 +490,14 @@ footer {
 @media (min-width: 280px) and (max-width: 767px) {
   /*--ESTILOS DEL INDEX--*/
   .cards-container {
-    width: 200px;
     flex-direction: column;
+    width: 100%;
+    gap: 10px;
   }
   .testimony-card {
     flex-direction: row;
     gap: 40px;
+    width: 260px;
   }
   .testimony-card.reverse {
     flex-direction: row-reverse;
